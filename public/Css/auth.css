@@ -1,0 +1,194 @@
+body{
+    background-color: whitesmoke;
+}
+.logo h3{
+    color:seagreen;
+}
+
+
+.mainDiv{
+    height: 500px;
+    width: 542px;
+    padding-left: 20px;
+    margin-left: 437px;
+    margin-top: 18px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 2%;
+    /* border-style: ridge; */
+    box-shadow: 4px 4px 16px 2px rgb(211 212 211);
+
+}
+.welcome h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 550;
+    margin: 6px;
+    color: seagreen;
+    /* color: #44a756; */
+     /* background: beige; */
+   
+} 
+.logo-img{
+    display: flex;
+    align-items: center;
+    height: 88px;
+    width: 100px;
+}
+.logo h3{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 31px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 550;
+}
+.input{
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    /* margin:2px; */
+    padding: 28px;
+}
+.input-0 i{
+    color: seagreen;
+}
+.input-1 i{
+    color: seagreen;
+    
+}
+.input-2 i{
+    color: seagreen;
+    
+}
+.input-0{
+    display: flex;
+    /* width: 365px; */
+    align-items: baseline;
+    outline: none;
+
+}
+.input-1{
+    display: flex;
+    /* width: 365px; */
+    align-items: baseline;
+    outline: none;
+}
+.input-2{
+    display: flex;
+    align-items: baseline;
+    outline: none;
+}
+.username{
+    width:365px;
+    margin:13px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+
+}
+.email{
+    width:365px;
+    margin:13px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+}
+.password{
+    width: 365px;
+    margin:13px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+} 
+.forgetPassword{
+    display: flex;
+    align-items: baseline;
+    /* padding: 2px; */
+    margin:2px;
+    position: relative;
+    left: 282px;
+}
+.forgetPassword:hover{
+    color: green;
+    font-weight: 600;
+}
+.login{
+    display: flex;
+    width: 297px;
+    height: 61px;
+    justify-content: center;
+    /* align-items: center; */
+     align-items: center;
+    margin-left: 115px;
+    margin-top: 14px ;
+    outline: none;
+}
+.login button{
+    background: #44a756;
+    color: white;
+    width: 263px;
+    height: 45px;
+    border-radius: 3.5%;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+
+}
+.Or{
+    /* margin-left: 109px; */
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 8px;
+
+}
+.signUp{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin:18px;
+    padding:2px;
+}
+.signUp p{
+    padding: 3px;
+}
+.UserExist{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    height: 30px;
+    width: 215px;
+}
+/* .input-3{
+
+} */
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }

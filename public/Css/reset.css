@@ -1,0 +1,39 @@
+.resetcontainer{
+    text-align: center;
+    align-items: center;
+    height: 283px;
+    margin: auto;
+    width: 438px;
+    border: 2px solid #c8dac8;
+    border-radius: 5%;
+    box-shadow: -2px 4px 11px 3px #c4d4c4;
+}
+.resetcontainer h3{
+    color: seagreen;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 12px;
+}
+.resetNewPass{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 11px;
+    width: 213px;
+    height: 36px;
+    background-color: transparent;
+    outline: none;
+}
+.resetConfirmPass{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 11px;
+    width: 213px;
+    height: 36px;
+    background-color: transparent;
+    outline: none;
+}
+.submitPass{
+    margin-top: 46px;
+}

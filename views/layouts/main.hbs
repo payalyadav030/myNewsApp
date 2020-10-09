@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <link rel="stylesheet" href="/static/Css/main.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img class="logo-img" src="https://www.graphicsprings.com/filestorage/stencils/42298ed295d21bc3884b0e738c407379.png?width=500&height=500">
+                 <h3>
+                     QuickNews
+                 </h3>
+
+            </div>
+            <div class="search-bar1" >
+                <div class="search-bar2">
+                     <input type= "text" class="search-input" > 
+                     <i class="fa fa-search fa-2x icon" aria-hidden="true"></i>   
+                     
+                </div>   
+            </div> 
+            <div class="weather">
+               
+
+            </div>
+            {{!-- <a class="anchor signAnchor ">
+                <button class="logout">Logout</button>
+                </a> --}}
+            
+            <div class="signIn">
+                {{#if data}}
+                <div class="dropdown">
+                   <button class="btn btn-secondary dropdown-toggle dropBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      {{username}}
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                       <a class="dropdown-item " href="http://localhost:8900/profilePage">View Profile</a>
+                       <a class="dropdown-item"  href="#">Favorites</a>
+                       <a class="dropdown-item signAnchor logout" >Logout</a>
+                   </div>
+                </div>
+                {{else}}
+                {{!-- whatsapp://send?text=Hello%20World! --}}
+                {{!-- http://localhost:8900/signIn --}}
+                <a class="anchor signAnchor" href="http://localhost:8900/signIn">
+                <button>SignIn</button>
+                </a>
+                {{/if}}
+             </div>
+        </header>
+        <aside class="catagory">
+           <h2>catagory </h2>
+           <ul class="list">
+             
+
+               <li>   
+                <i class="fas fa-heart"></i>
+                   <span>health</span>
+               </li>
+               <li>
+                   <i class='fas fa-skiing'></i>
+                   <span>sports</span>
+                </li>
+               <li>
+                   <i class='fas fa-address-card'></i>
+                   <span>business</span>
+                </li>
+               <li>
+                   <i class='fas fa-music'></i>
+                   <span>entertainment</span>
+                </li>
+               <li>
+                   <i class='fas fa-tv'></i>
+                   <span>technology</span>
+                  
+                </li>
+               <li>
+                   <i class='fas fa-flask'></i>
+                   <span>science</span>
+                  
+                </li>
+           </ul>
+        </aside>
+
+        {{{body}}}
+
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="/static/script.js"></script>
+        {{!-- <script type="text/javascript" src="/static/profileScript.js"></script> --}}
+    </body>
+</html> 
+ 

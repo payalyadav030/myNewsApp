@@ -1,0 +1,100 @@
+<div class="profileContainer">
+    
+    <div class="profileSubContainer">
+        <div class="profileImg">
+           <img  src="{{imageUrl}}" class="profileImgSrc">
+
+        </div>
+        <div class="profileInfo">
+        <span class="profileUsername"  > {{username}}</span>
+        <span class="profileEmail" >  {{email}}</span>
+        <div class="profileUpload">
+           <input type="file" class="imageUpload" id="fileupload" accept="image/*">
+           <label for="fileupload" class="choosePicture">
+             <p>Choose Profile Picture</p>
+             </label>
+           {{!-- <input type="submit" class="SubmitPhoto"> --}}
+
+        </div>
+      
+         </div>
+    </div>
+
+    <div class="changePassword">
+        <i class="fa fa-unlock"></i>
+        <span data-toggle="modal" data-target="#exampleModalChangePassword">Change Password</span>
+    </div>
+
+    
+    <div class="editProfile">
+        <i class='fas fa-edit'></i>
+        <span data-toggle="modal" data-target="#exampleModalCenter" >Edit Profile</span>
+    </div>
+    
+  
+</div>
+
+
+
+{{!-- modal for Edit Profile --}}
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit Your Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="ModalprofileImg">
+               <img  src=""> 
+              
+                   
+            </div>
+             {{!-- <p>Change Profile Picture</p> --}}
+             <div class="ModelInfo">
+
+                <input type="text" class="ModalprofileUsername" value="{{username}}"> 
+                <input type="text" class="ModalprofileEmail field left" readonly value="{{email}}">
+
+             </div>
+                            
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success saveChanges" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{!-- modal for Change Password --}}
+<div class="modal fade" id="exampleModalChangePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body-changePassword">
+        <input type="text" class="oldPassword op" placeholder="Enter Old Password">
+        <input type="text" class="newPassword op" placeholder="Enter New Password">
+        <input type="text" class="confirmPassword op" placeholder="Re-enter New Password">
+          
+            
+             
+                  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success saveChangePassword" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
