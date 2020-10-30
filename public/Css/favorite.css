@@ -1,0 +1,33 @@
+.sub-root{
+    flex: 2;
+    margin-top: 14px;
+}
+main img{
+    max-width: 100%;
+}
+.title{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.description{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    color: rgba(10, 6, 6, 0.712);
+
+}
+.content{
+    color:black;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+.anchor{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:600px){
+    .sub-root{
+        width: 100%;
+        flex:18;
+    }
+}

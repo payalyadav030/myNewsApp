@@ -1,20 +1,13 @@
 const Upload = {}
 
 const Route = require('./../routes/uploadpicture.js');
-const MongoClient = require('mongodb').MongoClient;
-var db = null;
-
-var url = 'mongodb://localhost:27017';
-MongoClient.connect(url, function(error, client){
-    if(error){
-        throw error;
-    }
-     db = client.db('newsApp');
-     
-});
+const mongo= require('../DB/connect.js')
 
 
 Upload.getPicture = function(email, imageUrl, callback){
+    db = mongo.db
+
+
     var collection = db.collection('registration');
 
     collection.find({

@@ -235,14 +235,14 @@ aside{
     text-decoration: none;
 }
 .addToSave{
-    color: green;
+    color:limegreen;
     display: flex;
     flex-grow: 0.5;
     /* margin-left: 70%; */
 }
-.addToSave:hover{
+/* .addToSave:hover{
     color: limegreen;
-}
+} */
 .share{
     width: 20px;
     margin-right: 13px;
@@ -510,7 +510,7 @@ main img{
     border-radius: 3%;
     height: 38px;
 }
-.forgetConatiner{
+.forgetContainer{
     margin-top: 20px;
     height: 208px;
     width: 316px;
@@ -556,24 +556,6 @@ label:hover{
 }
 
 
-
-
-
-
-
-
-/* .share-button { 
-    margin: auto;
-    position: absolute; 
-    top: 0; 
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width:6em;
-    height:2em;
-    line-height:2em;
-   }
-   */
   .social-toggle {
     display:block;
     font-weight:bold;
@@ -691,5 +673,222 @@ label:hover{
     color:#222;
   }
   
-  
-  
+    
+
+   @media screen and (min-width:600px){
+      .fa-bars{
+          visibility: hidden;
+      }
+      .logo-imgOnDevice{
+           visibility: hidden; 
+          display: none;
+      }
+      .crossIcon{
+          visibility: hidden;
+      }
+
+  }
+  @media screen and (max-width:600px){
+      .header{
+          width: 100%;
+      }
+      .logo-img{
+          height: 47px;
+          width: 45px;
+      }
+      .fa-search{
+          font-size: 1.3em !important;
+      }
+      .catagory{
+        width: 100%;
+        height: 550px;
+        margin: 0px;
+        padding: 0px;
+        /* margin-left: 12px; */
+        /* visibility: hidden; */
+        display: none;
+        /* flex: 0.5*/
+      } 
+      .crossIcon{
+        visibility: visible;
+        font-size: 1.6em;
+        display: flex !important;
+        justify-content: flex-end;
+        margin-top: 6px;
+        margin-right: 10px;
+      }
+      .list{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        background-color: aliceblue;
+      }
+      .list li{
+          margin-left: 56px;
+      }
+      .quickNews{
+          display: none;
+      }
+      .weather{
+          display: none;
+      } 
+      .quickNews{
+        display: none;
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+    .signAnchor{
+        width: 61px;
+    }
+    .signAnchor button{
+        font-size: 14px;
+        font-weight: 541;
+    }
+    .signIn button{
+        width: 75%;
+    }
+     .main{
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-root{
+       flex: 1;
+       padding: 10px;
+       overflow: hidden;
+    }
+   .dropDownUsername{
+    width: 100px !important;
+   }
+   .signIn{
+       position: relative;
+       top: 2px;
+       /* margin: auto; */
+       display: flex;
+     
+   }
+   .sideDiv{
+       flex: 0;
+   }
+   .dropdown{
+    width: 88px !important;
+    top: 0px;
+    right: 16px;
+   }
+   .dropdown-menu{
+    width: 19px !important;
+    /* height: 159px; */
+    /* position: relative !important; */
+    left: -30% !important;
+    /* top: -36px !important; */
+   }
+   /* social-media share */
+   .social-networks ul{
+       width:93px;
+       height: 37px;
+   }
+   .social-networks li{
+    width: 31px;
+    height: 37px;
+   }
+}
+   
+/* //////////////// PROFILE PAGE///////// */
+@media screen and (max-width:600px){
+    body{
+        overflow: scroll;
+    }
+    .profileToHome{
+        margin: auto;
+        margin-right: 175px;
+        font-size: 0.8em;
+    }
+    
+    .homeIcon{
+        font-size: 1.2em;
+    }
+    
+    .logout button{
+        font-size:13px;
+    }
+    .logout{
+        width: 70px;
+    }
+    .profileContainer{
+        width: 94%;
+    height: 429px;
+    margin: 13px;
+    padding: 0px;
+    transform: none;
+    position: relative;
+    /* top: 0px; */
+    left: 0px;
+    overflow: hidden;
+    }
+    .profileImg{
+        width: 24%;
+    /* flex: 1; */
+    position: relative;
+    left: 24px;
+    top: 82px;
+    height: 90px;
+    }
+    .profileSubContainer{
+        width: 100%;
+    }
+    .profileInfo{
+        width: 100%;
+    /* display: flex; */
+    /* flex: 15; */
+    /* position: relative; */
+    left: 62px;
+    }
+    .modal-content{
+        position: relative;
+        margin-top: -209px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 86%;
+        height: 308px;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        outline: 0;
+    }
+    .editProfileImg{
+        display: flex;
+        height: 181px;
+        position: none;
+        flex: none;
+        padding: 0px;
+        
+    }
+    .ModalprofileImg{
+        /* display: inline-block;  */
+    height: 146px;
+    border: 2px solid rgb(127, 221, 108);
+    width: 24%;
+    border-radius: 50%;
+    position: relative;
+    left: 14px;
+    top: 15px;
+    }
+    .ModelInfo{
+        position: relative;
+    top: 36px;
+    left: 37px;
+    /* left: 20px; */
+    height: 103px;
+    width: 225px;
+    margin-top: 0px;
+    margin-left: 0px;
+    /* flex: 3; */
+    /* margin-right: 177px; */
+    /* margin-left: 80px; */
+    /* margin-top: 46px;*/
+    }
+}

@@ -7,6 +7,9 @@
     
         <link rel="stylesheet" href="/static/Css/main.css">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        {{!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> --}}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -15,9 +18,16 @@
     <body>
         <header class="header">
             <div class="logo">
-                <img class="logo-img" src="https://www.graphicsprings.com/filestorage/stencils/42298ed295d21bc3884b0e738c407379.png?width=500&height=500">
+                <a class="redirectHome" href="http://localhost:8900">
+                    <img class="logo-img" src="https://www.graphicsprings.com/filestorage/stencils/42298ed295d21bc3884b0e738c407379.png?width=500&height=500">
+                </a>
+                {{!-- <img class="logo-img" src="https://www.graphicsprings.com/filestorage/stencils/42298ed295d21bc3884b0e738c407379.png?width=500&height=500"> --}}
+                <i class="fa fa-bars menuBarOnDevice"></i>
+
                  <h3>
-                     QuickNews
+                     
+                    <span class="quickNews"> QuickNews</span>
+                     {{!-- <img class="logo-imgOnDevice" src="https://www.graphicsprings.com/filestorage/stencils/42298ed295d21bc3884b0e738c407379.png?width=500&height=500"> --}}
                  </h3>
 
             </div>
@@ -39,12 +49,12 @@
             <div class="signIn">
                 {{#if data}}
                 <div class="dropdown">
-                   <button class="btn btn-secondary dropdown-toggle dropBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                   <button class="btn btn-secondary dropdown-toggle dropBtn dropDownUsername" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       {{username}}
                    </button>
-                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                   <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
                        <a class="dropdown-item " href="http://localhost:8900/profilePage">View Profile</a>
-                       <a class="dropdown-item"  href="#">Favorites</a>
+                       <a class="dropdown-item favorites" href="http://localhost:8900/favorites">Favorites</a>
                        <a class="dropdown-item signAnchor logout" >Logout</a>
                    </div>
                 </div>
@@ -58,6 +68,7 @@
              </div>
         </header>
         <aside class="catagory">
+            <span><i class="fa fa-close crossIcon"></i></span>
            <h2>catagory </h2>
            <ul class="list">
              

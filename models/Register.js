@@ -5,17 +5,7 @@ const Registration ={}
 const MongoClient = require('mongodb').MongoClient;
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-var db = null;
-
-var url = 'mongodb://localhost:27017';
-MongoClient.connect(url, function(error, client){
-    if(error){
-        throw error;
-    }
-     db = client.db('newsApp');
-     
-});
-
+const mongo= require('../DB/connect.js')
 
 Registration.getInfo = function(username, email, password, callback){
     if(!username){
@@ -28,6 +18,8 @@ Registration.getInfo = function(username, email, password, callback){
     if(!password){
         return callback("password required");
     }
+
+    db = mongo.db
     
     var collection = db.collection('registration');
     

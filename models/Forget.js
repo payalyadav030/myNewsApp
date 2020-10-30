@@ -37,16 +37,7 @@ async function main(verificationEmail, link) {
   }
   
 
-const MongoClient = require('mongodb').MongoClient
-var db = null;
-
-var url = "mongodb://localhost:27017"
-MongoClient.connect(url, function(error, client){
-    if(error){
-        throw error;
-    }
-    db = client.db('newsApp');
-})
+  const mongo= require('../DB/connect.js')
 
 
 Forget.verification = function(verificationEmail,  callback){
@@ -55,6 +46,9 @@ Forget.verification = function(verificationEmail,  callback){
     if(!verificationEmail){
         return callback("Email required");
     }
+    db = mongo.db
+
+
     var collection = db.collection('registration');
     collection.find({
         email:verificationEmail

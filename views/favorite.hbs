@@ -1,0 +1,57 @@
+{{!-- <div>
+    {{#each favorites}}
+
+    
+        <p>{{this.heading}}</p>
+
+    {{/each}}
+</div> --}}
+
+<div class="root">
+    <aside class="catagory">
+
+    </aside>
+    <div class="sub-root">
+    <main class="main">
+        {{#each favorites}}
+            <a class="anchor" href={{this.link}}>
+                <article>
+                    <h2 class="title">{{this.heading}}</h2>
+                    <p class="author">{{this.author}}</p>
+                    <img src={{this.image}}>
+                    <p class="description">{{this.description}}</p>
+                    <p class="content">{{this.content}}</p>
+                </article>
+
+            </a>
+            {{/each}}
+    </main>
+    </div>
+    <div class="sideDiv">
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+{{!-- <div class="sub-root">
+    <main class="main">
+        {{#each favorites}}
+            <a class="anchor" href={{this.link}}>
+                <article>
+                    <h2 class="title">{{this.heading}}</h2>
+                    <p class="author">{{this.author}}</p>
+                    <img src={{this.image}}>
+                    <p class="description">{{this.description}}</p>
+                    <p class="content">{{this.content}}</p>
+                </article>
+
+            </a>
+            {{/each}}
+    </main>
+</div> --}}

@@ -1,4 +1,5 @@
 
+var BASE_URL= "http://localhost:8900"
 
 $(document).ready(function(){
     var categoryVal="";
@@ -56,7 +57,7 @@ $(document).ready(function(){
                  '<a href="https://www.twitter.com">T</a>'+
                '</li>'+
               '<li class="social-facebook">'+
-               '<a href="https://www.facebook.com">F</a>'+
+               '<a href="#">F</a>'+
                '</li>'+
                '<li class="social-gplus">'+
                  '<a href="#" class="goToWtsp"><i class="fab fa-whatsapp fa-1x"></i></a>'+
@@ -67,7 +68,7 @@ $(document).ready(function(){
              // <i class="fab fa-whatsapp fa-1x"></i>                                                                                           
 
         $('main').append($('<a/>').addClass('anchor').attr("href", card.articles[i].url).append($('<article/>').append([$('<h2/>').addClass("title").css({"color":"black"}).text(card.articles[i].title), 
-        $('<p/>').css({"font-weight":"500"}).text(card.articles[i].author),
+        $('<p/>').addClass("author").css({"font-weight":"500"}).text(card.articles[i].author),
              $('<img/>').attr("src", card.articles[i].urlToImage),
             $('<p/>').addClass("description").text(card.articles[i].description),
              $('<p/>').addClass("content").text(card.articles[i].content),
@@ -81,7 +82,90 @@ $(document).ready(function(){
          }      
      }
 
-   
+     ///////CATAGORY LIST ON DEVICE- MOBILE/////////////////////////////////////
+     $('.fa-bars').on('click', function(){
+         console.log("okk")
+         $('.catagory').css({"display":"initial","background-color":"aliceblue"})
+         $('.sub-root').css({"display":"none"})
+        //  $('.list').css({"flex":"0.5"})
+         
+     })
+     $('.crossIcon').on('click', function(){
+         console.log("ok")
+         $('.sub-root').css("display","initial");
+         $('.catagory').css("display","none")
+     })
+
+
+
+
+     ////////////////FAVORITES-BOOKMARK/////////////////
+     $(document).on('click','.addToSave', function(){
+        console.log("clicked bookmark");
+        // $(this).css({"color": " green", "padding-left":"2px"})
+        var link = $(this).closest(".anchor")
+        console.log(link[0].href)   
+        var heading = $(this).closest(":has(h2)").find('h2');
+        console.log(heading[0].innerText);
+        var author = $(this).closest(":has(.author)").find('.author')
+        console.log(author[0].innerText);
+        var image = $(this).closest(":has(img)").find('img');
+        console.log(image[0].src)
+        var description = $(this).closest(":has(.description)").find('.description')
+        console.log(description[0].innerText);
+        var content = $(this).closest(":has(.content)").find('.content');
+        console.log(content[0].innerText)
+        $.ajax({
+             url:BASE_URL+"/bookmark",
+             method:"POST",
+             data:{
+                link :link[0].href,
+                heading:heading[0].innerText,
+                author:author[0].innerText,
+                image:image[0].src,
+                description:description[0].innerText,
+                content:content[0].innerText
+             },
+             success: function(response){
+                 console.log(response);
+                 if(response){
+                     $('.addToSave').css({"padding-left":"2px"})
+                 }
+                 
+             },
+             error:function(err){
+                 if(err){
+                    
+                     alert(err.responseText)
+                 }
+             }
+            
+     })
+    })
+
+    ////////////////////////FAVORITES PAGE//////////////////////////////////////////
+
+    
+        $('.favorites').on('click', function(){
+            console.log("okkkayyy")
+            $.ajax({
+                url:BASE_URL+"/favorites",
+                method:"GET",
+                success:function(response){
+                    console.log("okk")
+                    console.log(response)
+                }
+            })
+        })
+    
+
+    
+    
+
+
+
+
+
      ///////WHATSAPP SHARE/////////
         $(document).on('click','.social-gplus',function(){
             console.log("ok");
@@ -107,20 +191,41 @@ $(document).ready(function(){
 
         $(document).on('click','.social-facebook', function(){
             console.log("ok");
-            var facebookURL = "https://www.facebook.com"
-            window.location.replace(facebookURL)
+            var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes"
+            var heading = $(this).closest(":has(h2)").find('h2');
+          // console.log(heading[0].innerText);
+           var link = $(this).closest(":has(.anchor)").find('.anchor');
+           //console.log(link[0].href);
+           var content = $(this).closest(":has(.content)").find('.content');
+           //console.log(content[0].innerText)
+
+        //    https://www.facebook.com/sharer/sharer.php?u=example.org
+
+            // var facebookURL = <a href="https://www.facebook.com/sharer/sharer.php?u="></a>
+            
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u="+[[link[0].href]]+"&"+[[content[0].innerText]];
+            console.log(facebookURL)
+              window.open(facebookURL,"_blank", strWindowFeatures);
 
         })
 
+        $(document).on('click', '.social-twitter', function(){
+            console.log("ok");
+            var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+            var heading = $(this).closest(":has(h2)").find('h2');
+            // console.log(heading[0].innerText);
+             var link = $(this).closest(":has(.anchor)").find('.anchor');
+             //console.log(link[0].href);
+             var content = $(this).closest(":has(.content)").find('.content');
+             //console.log(content[0].innerText)
+             //https://twitter.com/intent/tweet?url=
+
+             var twitterURL = "https://twitter.com/intent/tweet?url="+[[link[0].href]]+"&"+[[content[0].innerText]];
+             console.log(twitterURL);
+             window.open(twitterURL, "_blank", strWindowFeatures)
 
 
-
-
-
-
-
-  
-    
+        })
 
      $(document).on('click','.social-toggle', function() {
         $(this).next().toggleClass('open-menu');

@@ -1,4 +1,5 @@
 
+var BASE_URL = "http://localhost:8900"
 
 $(document).ready(function(){
 
@@ -32,7 +33,7 @@ $(document).ready(function(){
         registration(username, email, password);
 
         $.ajax({
-            url: "http://apilayer.net/api/check?access_key=347b7e8af20e76e639bb76735621bca5&email="+email,
+            url: "http://apilayer.net/api/check?access_key=d877e856165c4155b3066cfa263a5adf&email="+email,
             method: "GET",
             
             success:function(response){
@@ -45,7 +46,7 @@ $(document).ready(function(){
         })
         function validateEmail(){
             $.ajax({
-                url: "http://localhost:8900/register",
+                url: BASE_URL+"/register",
                 method: "POST",
                 data:{
                     username:username,
@@ -97,7 +98,7 @@ $(document).ready(function(){
         // console.log(email, password);
 
         $.ajax({
-            url: "http://localhost:8900/login",
+            url: BASE_URL+"/login",
             method: "POST",
             data:{
                 email:email,
@@ -123,7 +124,7 @@ $(document).ready(function(){
     $('.logout').on('click', function(){
         console.log("okkk")
         $.ajax({
-            url:"http://localhost:8900/logout",
+            url:BASE_URL+"/logout",
             method:"POST",
             success: function(response){
                 console.log(response);
@@ -138,7 +139,7 @@ $(document).ready(function(){
         console.log(verificationEmail);
 
         $.ajax({
-            url:"http://localhost:8900/verification",
+            url:BASE_URL+"/verification",
             method:"POST",
             data:{
                 verificationEmail:verificationEmail
@@ -182,7 +183,7 @@ $(document).ready(function(){
             $('.passNotMatched').css({"font-weight":"650", "color":"red", "text-align":"center"}).text("Password didn't matched")
         }
         $.ajax({
-            url:"http://localhost:8900/submitPassword",
+            url:BASE_URL+"/submitPassword",
             method:"POST",
             data:{
                 token:token,

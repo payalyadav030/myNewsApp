@@ -1,7 +1,5 @@
-// const { compareSync } = require("bcrypt");
 
-//const { compareSync } = require("bcrypt");
-
+var BASE_URL = "http://localhost:8900"
 $(document).ready(function(){
 
     $('.icon').on('click', function(){
@@ -86,7 +84,7 @@ $(document).ready(function(){
       $('.logout').on('click', function(){
         ///console.log("okkk")
         $.ajax({
-            url:"http://localhost:8900/logout",
+            url:BASE_URL+"/logout",
             method:"POST",
             success: function(response){
                 console.log(response);
@@ -106,7 +104,7 @@ $(document).ready(function(){
         }
             console.log(username, email);
             $.ajax({
-                url:"http://localhost:8900/updateUser",
+                url:BASE_URL+"/updateUser",
                 method:"POST",
                 data:{
                     username:username,
@@ -138,7 +136,7 @@ $(document).ready(function(){
             return false;
         }
         $.ajax({
-            url:"http://localhost:8900/changePassword",
+            url:BASE_URL+"/changePassword",
             method:"POST",
             data:{
                 oldPassword:oldPassword,
@@ -151,27 +149,7 @@ $(document).ready(function(){
         })
 
     })
-    // $('.imageUpload').on('change', async function(e){
-    //     console.log(e)
-    //     var tmppath = URL.createObjectURL(e.target.files[0])
-    //     console.log(e.target.files[0])
-    //    var image = $('.profileImgSrc').attr('src', tmppath)
-    // //    console.log(image);
-    //     var formdata = new FormData();
-    //     await formdata.append('image', e.target.files[0] )
-
-    // $.ajax({
-    //     url:"http://localhost:8900/uploadPicture",
-    //     method:"POST",
-    //     data:formdata,
-    //     success:function(response){
-    //         console.log(response);
-    //     }
-
-    // })
-
-    // })
-
+    
     $('.imageUpload').on('change', function(e){
 
         $('.choosePicture p').hide();
@@ -188,7 +166,7 @@ $(document).ready(function(){
 
           $('.upload').on('click', function(){
               $.ajax({
-                  url:"http://localhost:8900/uploadPicture",
+                  url:BASE_URL+"/uploadPicture",
                   method:"POST",
                   processData: false,
                   contentType: false,

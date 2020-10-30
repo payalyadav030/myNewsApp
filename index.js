@@ -8,8 +8,10 @@ const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const multer = require('multer')
 const saltRounds = 10;
+const connect = require('./DB/connect.js');
 
-const app = express();
+
+ app = express();
 const PORT = 8900;
 
 app.use(express.json());
@@ -58,7 +60,9 @@ var passwordRoute = require('./routes/password.js');
 var forgetPassword = require('./routes/forget.js');
 var resetPassword = require('./routes/resetPassword.js');
 var submitPassword = require('./routes/submitPass.js');
-var UploadPicture = require('./routes/uploadpicture.js')
+var UploadPicture = require('./routes/uploadpicture.js');
+var bookmarkRoute = require('./routes/bookmark.js');
+var favoriteRoute = require('./routes/favorites.js')
 
 
 
@@ -81,11 +85,20 @@ app.get('/forgetPassword', forgetPassword.forgetPassword);
 app.post('/verification', forgetPassword.verification);
 app.get('/resetPassword/:id/:userId', resetPassword.getPage);
 app.post('/submitPassword', submitPassword.passwordSubmitted);
-app.post('/uploadPicture',upload.single('image'), UploadPicture.getPicture)
+app.post('/uploadPicture',upload.single('image'), UploadPicture.getPicture);
+app.post('/bookmark', bookmarkRoute.bookMark);
+app.get('/favorites', favoriteRoute.favoritePage )
 
 
 
 
-app.listen(PORT, function(){
-    console.log("Application has been started on the PORT:", PORT);
+connect.connectDB(function(error,success){
+
+    if(error){console.log(error)}
+    app.listen(PORT,function(){
+        console.log("Application has been started on the PORT:", PORT)
+        console.log(connect)
+    })
 })
+
+

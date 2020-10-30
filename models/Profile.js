@@ -4,23 +4,15 @@ const profile = require('./../routes/profile.js')
 
 const Profile = {};
 
-const MongoClient = require('mongodb').MongoClient
-var db = null;
-
-var url = "mongodb://localhost:27017"
-MongoClient.connect(url, function(error, client){
-    if(error){
-        throw error;
-    }
-    db = client.db('newsApp')
-})
-
+const mongo= require('../DB/connect.js')
 
 
 Profile.updateProfile = function(username,email, callback){
     if(!username){
         return callback("Name required")
     }
+
+    db = mongo.db
     
      
     var collection = db.collection('registration');
