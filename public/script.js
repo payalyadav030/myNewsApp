@@ -14,7 +14,7 @@ $(document).ready(function(){
       // console.log(count);
      
       $.ajax({
-            url:"https://newsapi.org/v2/top-headlines?country=in&page="+count+"&category="+data+"&pagesize=10&apiKey=a230910ac0404106ab46f044d3519d21",
+            url:"https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=in&page="+count+"&category="+data+"&pagesize=10&apiKey=a230910ac0404106ab46f044d3519d21",
             method: "GET",
    
             success : function(response){
@@ -360,7 +360,7 @@ $(document).ready(function(){
         function searchBar(data){
             console.log(data)
             $.ajax({
-                url: "https://newsapi.org/v2/everything?q="+data+"&apiKey=a230910ac0404106ab46f044d3519d21",
+                url: "https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?q="+data+"&apiKey=a230910ac0404106ab46f044d3519d21",
                 method:"GET",
 
                 success: function(response){
