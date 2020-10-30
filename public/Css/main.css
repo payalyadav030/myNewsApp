@@ -737,6 +737,7 @@ label:hover{
     }
     .fa-bars{
         visibility: visible;
+        margin-left: 12px;
     }
     .signAnchor{
         width: 61px;

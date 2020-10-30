@@ -85,7 +85,7 @@ $(document).ready(function(){
        // console.log(password)
         if(!email){
             $('.email').css({'border-bottom': 'solid 2px red'})
-            $('.email').attr({"placeholder":" password required"})
+            $('.email').attr({"placeholder":" email required"})
         }
         if(password.length==0){
             //console.log(password)
