@@ -1,5 +1,5 @@
 
-var BASE_URL = "http://localhost:8900"
+var BASE_URL = "https://quicknews-app.herokuapp.com"
 
 $(document).ready(function(){
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
         registration(username, email, password);
 
         $.ajax({
-            url: "http://apilayer.net/api/check?access_key=d877e856165c4155b3066cfa263a5adf&email="+email,
+            url: "https://apilayer.net/api/check?access_key=d877e856165c4155b3066cfa263a5adf&email="+email,
             method: "GET",
             
             success:function(response){

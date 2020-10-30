@@ -1,5 +1,5 @@
 
-var BASE_URL = "http://localhost:8900"
+var BASE_URL = "https://quicknews-app.herokuapp.com"
 $(document).ready(function(){
 
     $('.icon').on('click', function(){
@@ -11,7 +11,7 @@ $(document).ready(function(){
     function searchBar(data){
         console.log(data)
         $.ajax({
-            url: "http://newsapi.org/v2/everything?q="+data+"&apiKey=a230910ac0404106ab46f044d3519d21",
+            url: "https://newsapi.org/v2/everything?q="+data+"&apiKey=a230910ac0404106ab46f044d3519d21",
             method:"GET",
 
             success: function(response){
@@ -63,7 +63,7 @@ $(document).ready(function(){
       function getWeather(lat, long){
          // console.log(lat, long);
         $.ajax({
-            url: `http://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`,
+            url: `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`,
             method:"GET",
     
             success: function(data){
@@ -75,7 +75,7 @@ $(document).ready(function(){
     
      function currentWeather(data){
         
-         //$('.weather').append($('<img/>').addClass("weatherIcon").attr("src", "https://cdn.glitch.com/6e8889e5-7a72-48f0-a061-863548450de5%2F50d.png?1499366021771"),
+         //$('.weather').append($('<img/>').addClass("weatherIcon").attr("src", "httpss://cdn.glitch.com/6e8889e5-7a72-48f0-a061-863548450de5%2F50d.png?1499366021771"),
          $('.weather').append(('<i class="fas fa-cloud-sun fa-2x"></i>'),
         $('<span/>').addClass("weatherDescription").text(data.weather[0].main),
         $('<span/>').addClass("weatherTemp").text(data.main.temp+ "°"));
