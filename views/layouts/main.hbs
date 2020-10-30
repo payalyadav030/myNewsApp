@@ -53,15 +53,17 @@
                       {{username}}
                    </button>
                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                       <a class="dropdown-item " href="http://localhost:8900/profilePage">View Profile</a>
-                       <a class="dropdown-item favorites" href="http://localhost:8900/favorites">Favorites</a>
+                       <a class="dropdown-item " href="https://quicknews-app.herokuapp.com/profilePage">View Profile</a>
+                       {{!-- <a class="dropdown-item " href="/profilePage">View Profile</a> --}}
+                       {{!-- <a class="dropdown-item " href="/profilePage">View Profile</a> --}}
+                       <a class="dropdown-item favorites" href="https://quicknews-app.herokuapp.com/favorites">Favorites</a>
                        <a class="dropdown-item signAnchor logout" >Logout</a>
                    </div>
                 </div>
                 {{else}}
                 {{!-- whatsapp://send?text=Hello%20World! --}}
                 {{!-- http://localhost:8900/signIn --}}
-                <a class="anchor signAnchor" href="http://localhost:8900/signIn">
+                <a class="anchor signAnchor" href="https://quicknews-app.herokuapp.com/signIn">
                 <button>SignIn</button>
                 </a>
                 {{/if}}
