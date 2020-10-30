@@ -11,6 +11,30 @@ const saltRounds = 10;
 const connect = require('./DB/connect.js');
 
 
+
+
+// newsapi.v2.everything({
+//     q: 'sports',
+//     // sources: 'bbc-news,the-verge',
+//     // domains: 'bbc.co.uk,techcrunch.com',
+    
+//     language: 'en',
+//     pagesize:10,
+    
+//     page: 2
+//   }).then(response => {
+//     console.log(response);
+//     /*
+//       {
+//         status: "ok",
+//         articles: [...]
+//       }
+//     */
+//   });
+
+
+
+
  app = express();
 const PORT = process.env.PORT || 8900;
 
@@ -52,6 +76,8 @@ const upload = multer({
 
 
 
+
+
 var homepageRoute = require('./routes/home.js')
 var loginPageRoute = require('./routes/login.js');
 var registerRoute = require('./routes/register.js');
@@ -62,7 +88,8 @@ var resetPassword = require('./routes/resetPassword.js');
 var submitPassword = require('./routes/submitPass.js');
 var UploadPicture = require('./routes/uploadpicture.js');
 var bookmarkRoute = require('./routes/bookmark.js');
-var favoriteRoute = require('./routes/favorites.js')
+var favoriteRoute = require('./routes/favorites.js');
+var newsHeadlines = require('./routes/newsData.js')
 
 
 
@@ -87,7 +114,9 @@ app.get('/resetPassword/:id/:userId', resetPassword.getPage);
 app.post('/submitPassword', submitPassword.passwordSubmitted);
 app.post('/uploadPicture',upload.single('image'), UploadPicture.getPicture);
 app.post('/bookmark', bookmarkRoute.bookMark);
-app.get('/favorites', favoriteRoute.favoritePage )
+app.get('/favorites', favoriteRoute.favoritePage );
+// app.post('/news/top-headlines', newsHeadlines.getNews);
+app.post('/news/search', newsHeadlines.query)
 
 
 
