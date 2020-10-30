@@ -12,7 +12,7 @@ const connect = require('./DB/connect.js');
 
 
  app = express();
-const PORT = 8900;
+const PORT = process.env.PORT || 8900;
 
 app.use(express.json());
 app.use(express.urlencoded());
