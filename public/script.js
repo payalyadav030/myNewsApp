@@ -321,10 +321,14 @@ $(document).ready(function(){
              }
         }
         else{
+            if(count>8){
+                count = 8;
+            }
             for(var i=1; i<= count; i++){
                 $('.paginationUl').append([$('<li/>').addClass("pageNo").append($('<button/>').addClass("pageBtn").text(i))]);
                
             }
+        
         }
      }
     
