@@ -11,9 +11,9 @@ async function main(verificationEmail, link) {
   
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-        service:'gmail',
-        // host: 'smtp.ethereal.email',
-        // port: 587,
+        // service:'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
         auth: {
             user: 'quicknews220@gmail.com',
             pass: 'Abc123@!'
@@ -77,7 +77,7 @@ Forget.verification = function(verificationEmail,  callback){
             }
         ).then(function(response){
             if(response){
-                var link = "http://localhost:8900/resetPassword/"+uId+"/"+userId
+                var link = " https://quicknews-app.herokuapp.com/resetPassword/"+uId+"/"+userId
                 main(verificationEmail, link )
                
                  
