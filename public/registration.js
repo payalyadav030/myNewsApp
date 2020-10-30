@@ -1,6 +1,10 @@
 
 var BASE_URL = "https://quicknews-app.herokuapp.com"
 
+//  quicknews220@gmail.com - d877e856165c4155b3066cfa263a5adf,
+// tokenapi1@gmail.com - 94af4344a0f4207fa0c8ffdd49bfde31,
+// payalyadav.318@gail.com - 347b7e8af20e76e639bb76735621bca5
+
 $(document).ready(function(){
 
     function registration(username, email, password){
@@ -23,6 +27,8 @@ $(document).ready(function(){
 
     $('.loginBtn').on('click', function(){
         //console.log("okkk clicked");
+        var mailboxApi = ['d877e856165c4155b3066cfa263a5adf','94af4344a0f4207fa0c8ffdd49bfde31' ];
+        var apiKey = mailboxApi[Math.floor(Math.random()* mailboxApi.length)]
 
         var username = $('.username').val();
         var email = $('.email').val();
@@ -33,7 +39,8 @@ $(document).ready(function(){
         registration(username, email, password);
 
         $.ajax({
-            url: "https://apilayer.net/api/check?access_key=d877e856165c4155b3066cfa263a5adf&email="+email,
+            url: "https://apilayer.net/api/check?access_key"+apiKey+"&email="+email,
+            // url: "https://apilayer.net/api/check?access_key=d877e856165c4155b3066cfa263a5adf&email="+email,
             method: "GET",
             
             success:function(response){
