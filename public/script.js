@@ -164,13 +164,6 @@ $(document).ready(function(){
         })
     
 
-    
-    
-
-
-
-
-
      ///////WHATSAPP SHARE/////////
         $(document).on('click','.social-gplus',function(){
             console.log("ok");
