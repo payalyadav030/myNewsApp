@@ -29,6 +29,7 @@ $(document).ready(function(){
         //console.log("okkk clicked");
         var mailboxApi = ['d877e856165c4155b3066cfa263a5adf','94af4344a0f4207fa0c8ffdd49bfde31' ];
         var apiKey = mailboxApi[Math.floor(Math.random()* mailboxApi.length)]
+        console.log(apiKey)
 
         var username = $('.username').val();
         var email = $('.email').val();
@@ -39,7 +40,7 @@ $(document).ready(function(){
         registration(username, email, password);
 
         $.ajax({
-            url: "https://apilayer.net/api/check?access_key"+apiKey+"&email="+email,
+            url: "https://apilayer.net/api/check?access_key="+apiKey+"&email="+email,
             // url: "https://apilayer.net/api/check?access_key=d877e856165c4155b3066cfa263a5adf&email="+email,
             method: "GET",
             
@@ -47,9 +48,10 @@ $(document).ready(function(){
                console.log(response);
                if(response.smtp_check == true){
                    validateEmail()
-               }
-              
+               } 
+               $('.input-3').css({"color":"red", "font-weight":"600"}).text("Email does not exist!!")  
             }
+           
         })
         function validateEmail(){
             $.ajax({
