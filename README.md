@@ -20,14 +20,18 @@
     * BCRYPT
 
 ### Getting started
-...javascript
+
     * git clone https://github.com/payalyadav030/myNewsApp.git
     * cd mynewsApp
     * npm install
     * npm start
-...
+
 
 ### Images
-![Github Logo](/images/logo.png)
-    * ![homepage view](/screenshots/homepage.png)
+
+    * ![Homepage view](/screenshots/homepage.png)
+    * ![Register page view](/screenshots/registerPage.png)
+    * ![Login page view](/screenshots/loginpage.png)
+    * ![Profile page view](/screenshots/profilepage.png)
+    * ![Mobile view](/screenshots/mobileview.png)
     
