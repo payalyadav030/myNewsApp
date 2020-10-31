@@ -28,8 +28,8 @@
 
 
 ### Images
-   
-
-     ![Homepageview](screenshots/homepage.png)
+   <div class="image">
+    <img src="/screenshots/homepage.png" width="400">
+   </div>
      
     
