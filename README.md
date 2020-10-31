@@ -29,9 +29,9 @@
 
 ### Images
 
-    * ![Homepage view](/screenshots/homepage.png)
-    * ![Register page view](/screenshots/registerPage.png)
-    * ![Login page view](/screenshots/loginpage.png)
-    * ![Profile page view](/screenshots/profilepage.png)
-    * ![Mobile view](/screenshots/mobileview.png)
+     ![Homepage view](/screenshots/homepage.png)
+     ![Register page view](/screenshots/registerPage.png)
+     ![Login page view](/screenshots/loginpage.png)
+     ![Profile page view](/screenshots/profilepage.png)
+     ![Mobile view](/screenshots/mobileview.png)
     
