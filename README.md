@@ -28,7 +28,7 @@
 
 
 ### Images
-    ![Github Logo](/images.logo.png)
+   
 
      ![Homepage view](/screenshots/homepage.png)
      ![Register page view](/screenshots/registerPage.png)
