@@ -30,6 +30,6 @@
 ### Images
    
 
-     ![Homepage view](screenshots/homepage.png?raw=true "Home Page")
+     ![Homepageview](screenshots/homepage.png)
      
     
