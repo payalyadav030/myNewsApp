@@ -2,7 +2,7 @@
 
 const NewsAPI = require('newsapi');
 
-var randomApi = ['39401baec9434faba658d2a99d4b8250','0f80b9b0a3a74e83ae6b56ff0411d0ea']
+var randomApi = [process.env.newsApi_key2, process.env.newsApi_key3]
 var api = randomApi[Math.floor(Math.random()* randomApi.length)]
 console.log(api, "api")
 

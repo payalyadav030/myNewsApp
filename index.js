@@ -11,30 +11,6 @@ const saltRounds = 10;
 const connect = require('./DB/connect.js');
 
 
-
-
-// newsapi.v2.everything({
-//     q: 'sports',
-//     // sources: 'bbc-news,the-verge',
-//     // domains: 'bbc.co.uk,techcrunch.com',
-    
-//     language: 'en',
-//     pagesize:10,
-    
-//     page: 2
-//   }).then(response => {
-//     console.log(response);
-//     /*
-//       {
-//         status: "ok",
-//         articles: [...]
-//       }
-//     */
-//   });
-
-
-
-
  app = express();
 const PORT = process.env.PORT || 8900;
 

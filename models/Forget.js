@@ -16,7 +16,7 @@ async function main(verificationEmail, link) {
         port: 465,
         auth: {
             user: 'quicknews220@gmail.com',
-            pass: 'Abc123@!'
+            pass: process.env.nodemailer_quicknews_pass
         }
     });
     // send mail with defined transport object

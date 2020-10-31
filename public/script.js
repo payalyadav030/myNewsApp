@@ -342,7 +342,10 @@ $(document).ready(function(){
             console.log(categoryVal);
             $('.main').children().remove();
             $('.paginationUl').children().remove();
-            $('.crossIcon').click()
+            if(window.innerWidth<600){
+
+                $('.crossIcon').click()
+            }
 
 
             headlines(1,categoryVal)
