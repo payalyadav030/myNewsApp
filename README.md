@@ -30,6 +30,10 @@
 ### Images
    <div class="image">
     <img src="/screenshots/homepage.png" width="400">
+    <img src="/screenshots/registerPage.png" width="400">
+    <img src="/screenshots/loginpage.png" width="400">
+    <img src="/screenshots/profilepage.png" width="400">
+    <img src="/screenshots/mobileview.png" width="400">
    </div>
      
     
